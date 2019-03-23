@@ -1,0 +1,21 @@
+{
+  "name": "react-spho",
+  "version": "1.0.0",
+  "description": "Hopefully the easiest to use animation library for React",
+  "main": "index.ts",
+  "repository": "https://github.com/ismailman/react-spho.git",
+  "author": "<code@omar.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "simple-performant-harmonic-oscillator": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4"
+  }
+}
