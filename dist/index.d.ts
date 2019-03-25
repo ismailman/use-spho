@@ -9,4 +9,8 @@ export declare type SphoConfig = {
     listeners: Listeners;
     initialPositions?: InitialPositionConfig;
 };
-export default function useSpho(config: SphoConfig): ((fromValue: number) => void)[];
+export declare type SphoConfigMap = {
+    [key: string]: SphoConfig;
+};
+export declare function useSpho(config: SphoConfig): ((fromValue: number) => void)[];
+export declare function useMultipleSpho(configMap: SphoConfigMap): ((property: string, fromValue: number) => void)[];
