@@ -1,6 +1,6 @@
 {
   "name": "use-spho",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hooks wrapper around simple performant harmonic oscillator",
   "main": "index.ts",
   "repository": "https://github.com/ismailman/use-spho.git",
