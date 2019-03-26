@@ -69,10 +69,10 @@ scheduler@^0.13.5:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-simple-performant-harmonic-oscillator@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/simple-performant-harmonic-oscillator/-/simple-performant-harmonic-oscillator-1.1.0.tgz#16451e9fa686ab4f47d25cdd45f9e939e26bb927"
-  integrity sha512-eHte91Zzsar5H7uwJP4r6B9sjUy/Vxh+6gDV7m/OXiVtlPqqJ7NOqYkDrcsZcPf3XLelxdWDcSQGURrMx3iPfA==
+simple-performant-harmonic-oscillator@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/simple-performant-harmonic-oscillator/-/simple-performant-harmonic-oscillator-2.0.0.tgz#616dd21acae3387fd41e6e34466d0cf09f27818a"
+  integrity sha512-hxhK1fzPtQQcrpRxheT9Op0hUxvWTc3PN5aosD7L50ty1ZngOOghot/jcMjSoefXaZ9Y662v6a+Die23qkkrZw==
 
 typescript@^3.3.3333:
   version "3.3.3333"

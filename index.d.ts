@@ -12,5 +12,7 @@ export declare type SphoConfig = {
 export declare type SphoConfigMap = {
     [key: string]: SphoConfig;
 };
-export declare function useSpho(config: SphoConfig): ((fromValue: number) => void)[];
-export declare function useMultipleSpho(configMap: SphoConfigMap): ((property: string, fromValue: number) => void)[];
+export declare type SetToValue = (value: number) => void;
+export declare function useSpho(config: SphoConfig): SetToValue;
+export declare type SetToValueForProp = (property: string, toValue: number) => void;
+export declare function useMultipleSpho(configMap: SphoConfigMap): SetToValueForProp;

@@ -16,9 +16,10 @@ export type SphoConfig = {
 
 export type SphoConfigMap = {
     [key:string]: SphoConfig;
-}
+};
 
-export function useSpho(config: SphoConfig) {
+export type SetToValue = (value: number) => void;
+export function useSpho(config: SphoConfig): SetToValue {
     const springRef: MutableRefObject<Spring | null> = useRef(null);
     useEffect(() => {
         springRef.current = new Spring(config.springConfig, config.initialPositions);
@@ -31,18 +32,15 @@ export function useSpho(config: SphoConfig) {
 
     }, []);
 
-    const setFromValue = (fromValue: number) => {
-        if(springRef.current) springRef.current.setFromValue(fromValue);
-    };
-
     const setToValue = (toValue: number) => {
         if(springRef.current) springRef.current.setToValue(toValue);
     };
 
-    return [setFromValue, setToValue];
+    return setToValue;
 }
 
-export function useMultipleSpho(configMap: SphoConfigMap){
+export type SetToValueForProp = (property: string, toValue: number) => void;
+export function useMultipleSpho(configMap: SphoConfigMap): SetToValueForProp {
     const springsRef: MutableRefObject<{[key: string]: Spring} | null> = useRef(null);
     useEffect(() => {
         springsRef.current = {};
@@ -64,17 +62,11 @@ export function useMultipleSpho(configMap: SphoConfigMap){
         };
     }, []);
 
-    const setFromValue = (property: string, fromValue: number) => {
-        const spring = springsRef.current && springsRef.current[property];
-        if(!spring) return;
-        if(spring) spring.setFromValue(fromValue);
-    };
-
     const setToValue = (property: string, toValue: number) => {
         const spring = springsRef.current && springsRef.current[property];
         if(!spring) return;
         if(spring) spring.setToValue(toValue);
     };
 
-    return [setFromValue, setToValue];
+    return setToValue;
 }
